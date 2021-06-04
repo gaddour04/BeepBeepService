@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+<a th:href="@{/villes/add}" style="margin: 20px 0" class="btn btn-primary">Add Ville</a>
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+           
+            <th scope="col">Ville Name</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr  th:each="ville : ${villes}">
+            
+            <td th:text="${ville.nomVille}">Larry</td>
+
+            <td><a href="" th:href="@{/villes/delete/{id}(id=${ville.id})}" class="btn btn-danger">Delete</a></td>
+            <td><a href="" th:href="@{/villes/update/{id}(id=${ville.id})}" class="btn btn-warning">Update</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
