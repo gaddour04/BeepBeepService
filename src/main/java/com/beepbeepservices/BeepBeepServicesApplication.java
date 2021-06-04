@@ -36,9 +36,7 @@ public class BeepBeepServicesApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		 Ville ville=villeRepository.findById(1).get();
-		 String password=passwordencoder.encode("1234");
-		 User user=userRepository.save(new Admin("fathi04@gmail.com","fathi",password,ville,new Date(),null));
+		
 		/*
 		 * String x="CA"; Random rand = new Random(); int rand_int= rand.nextInt(1000);
 		 * String reference=x+rand_int; User user6=userRepository.findById(6L).get();
